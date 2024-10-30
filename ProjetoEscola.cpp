@@ -982,9 +982,9 @@ int main() {
     int qtdAluno = 0; // Inicializar a quantidade de alunos
     int qtdProfessor = 0;
     int qtdDisciplina = 0;
-    int qtdAlunoNaDisciplina = 40;
+    int qtdAlunoNaDisciplina = 0;
     int NumeroDeDisciplinas = 0;
-    listaDisciplina[0].qtdAlunosNaDisciplina = 40;
+    
     while (!sair) {
         opcao = menuGeral();
         switch (opcao) {
