@@ -852,9 +852,9 @@ int menuRelatorioAluno(){
     scanf("%d",&opcao);
     return opcao;
 }
-void ListarAlunosComMaisDe3Disciplinas(Aluno listaAluno[],int qtdAluno){
+void ListarAlunosComMenosDe3Disciplinas(Aluno listaAluno[],int qtdAluno){
     for(int i = 0; i < qtdAluno; i++){
-        if(listaAluno[i].NumeroDeDisciplinas > 3){
+        if(listaAluno[i].NumeroDeDisciplinas < 3){
             printf("Nome: %s\n Matricula %d\n", listaAluno[i].nome,listaAluno[i].matricula);
         }
     }
@@ -993,7 +993,7 @@ void AniversariantesDoMes(Aluno listaAluno[],int qtdAluno,Professor listaProfess
 int main() {
     setlocale(LC_ALL, "Portuguese");
     void ListarMateriasComMaisDeQuarentaAlunos(Disciplina listaDisciplina[],int qtdDisciplina, Professor listaProfessor[], int qtdProfessor);
-    void ListarAlunosComMaisDe3Disciplinas(Aluno listaAluno[],int qtdAluno);
+    void ListarAlunosComMenosDe3Disciplinas(Aluno listaAluno[],int qtdAluno);
     Aluno listaAluno[TAM_ALUNO] = {0}; // Inicializar a lista de alunos
     Professor listaProfessor[TAM_PROFESSOR] = {0}; // Inicializar a lista de professores
     Disciplina listaDisciplina[TAM_DISCIPLINA] = {0}; // Inicializar a lista de disciplinas
@@ -1191,7 +1191,7 @@ int main() {
                                     }
                                     case 4:{
                                     printf("Listar Alunos com menos de 3 Matérias\n");
-                                        ListarAlunosComMaisDe3Disciplinas(listaAluno,qtdAluno);
+                                        ListarAlunosComMenosDe3Disciplinas(listaAluno,qtdAluno);
                                     break;
                                     }
                                     default: {
